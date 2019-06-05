@@ -1,0 +1,12 @@
+.register{
+    margin-top: 4rem;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 4px;
+    padding: 2rem;
+}
+.register h2{
+    text-align: center;
+}
+.btn-guardar{
+    margin-right: 2rem;
+}

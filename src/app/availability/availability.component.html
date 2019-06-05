@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="container register">
+              <h2>Reserva de Habitación</h2>
+              <form>
+                <div class="form-group">
+                    <label for="room">Tipo de Habitación</label>
+                    <select class="form-control" id="room" [(ngModel)]="room" name="room">
+                      <option value="1">Familiar (3 Camas)</option>
+                      <option value="2">Doble (2 Camas)</option>
+                      <option value="3">Individual (1 cama)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="cin">Checkin:</label>
+                  <input [(ngModel)]="cin" type="date" class="form-control"  name="cin" value="2019-06-04" required>
+                </div>
+                <div class="form-group">
+                    <label for="cou">CheckOut:</label>
+                    <input [(ngModel)]="cou" type="date" class="form-control"  name="cou" value="2019-06-04" required>
+                  </div>
+                <div class="btn-group">
+                    <button (click)='availability()'  class="btn btn-primary btn-guardar">Disponibilidad</button>
+                    <button *ngIf='activo' (click)='reservar()' class="btn btn-success">Reservar</button>
+                    <button (click)='volver()'  class="btn btn-primary btn-guardar">volver</button>
+                </div>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>

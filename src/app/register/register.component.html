@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="container register">
+            <h2>Registro de Usuario</h2>
+            <form  class="was-validated">
+              <div class="form-group">
+                <label for="uname">Correo Electronico:</label>
+                <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="Ej: daniel.jimenez@tee.com.co" name="email" required>
+                <div class="invalid-feedback">Ingrese un correo valido</div>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Contraseña:</label>
+                <input [(ngModel)]="pwd" type="password" class="form-control" id="pwd" placeholder="Ej: **********" name="pwd" required>
+                <div class="invalid-feedback">Ingrese una Contraseña</div>
+              </div>
+              <div class="btn-group">
+                  <button (click)="addUser()"  class="btn btn-primary btn-guardar">Guardar</button>
+                  <button (click)='volver()' class="btn btn-danger">Cancelar</button>
+              </div>
+            </form>
+          </div>
+    </div>
+  </div>
+</div>
